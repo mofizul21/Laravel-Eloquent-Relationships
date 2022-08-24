@@ -1,0 +1,25 @@
+C:\laragon\www\eloquent_relationship
+Datbaase: eloquent_relationship
+
+1. One To One::
+Tables: user, phones
+Method: phone->hasOne()
+Reverse method: user->belongsTo()
+
+2. One To Many::
+Tables: posts, comments
+Method: comments->hasMany()
+Reverse method: post->belongsTo()
+
+3. Many To Many::
+Tables: posts, categories, category_post
+Method: categories->belongsToMany(), posts->belongsToMany()
+* Alphabetically naming convention with `category_post` table. And no need to create Model for the pivot table.
+
+4. Has One Through::
+Tables: cars, mechanics, owners
+Method: carOwner->hasOneThrough(), 
+
+5. Has Many Through
+Tables: countries, users, posts
+Method: Model Country.php-> posts()->hasManyThrough()
